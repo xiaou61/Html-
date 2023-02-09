@@ -1,0 +1,108 @@
+//首页的less文件
+@import "common";
+
+a {
+  text-decoration: none;
+}
+
+body {
+  min-width: 320px;
+  width: 15rem;
+  margin: 0 auto;
+  line-height: 1.5;
+  font-family: Arial, Helvetica, serif;
+  background: #f2f2f2;
+}
+
+//页面元素rem计算公式 页面元素的px/html的字体大小
+@beaseFont: 50;
+.search-content {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 15rem;
+  height: (88rem/@beaseFont);
+  background: #ffc001;
+
+  .classfiy {
+    width: (44rem/@beaseFont);
+    height: (70rem/@beaseFont);
+    background: url("../images/classify.png") no-repeat;
+    //背景缩放，父亲盒子有多大，就缩放成多大的
+    background-size: (44rem/@beaseFont) (70rem/@beaseFont);
+    margin: (11rem/@beaseFont) (25rem/@beaseFont) (7rem/@beaseFont) (24rem/@beaseFont);
+  }
+
+  .search {
+    flex: 1;
+
+    input {
+      outline: none;
+      width: 100%;
+      height: (66rem/@beaseFont);
+      border-radius: (33rem/@beaseFont);
+      background-color: #fff2cc;
+      margin-top: (12rem/@beaseFont);
+      font-size: (25rem/@beaseFont);
+      padding-left: (55rem/@beaseFont);
+      color: #757575;
+    }
+  }
+
+  .login {
+    width: (75rem/@beaseFont);
+    height: (70rem/@beaseFont);
+    line-height: (70rem/@beaseFont);
+    margin: (10rem / @beaseFont);
+    font-size: (25rem/@beaseFont);
+    text-align: center;
+    color: #fff;
+  }
+}
+
+//banner
+.banner {
+  width: (750rem/@beaseFont);
+  height: (368rem/@beaseFont);
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.ad {
+  display: flex;
+
+  a {
+    flex: 1;
+
+    img {
+      width: 100%;
+    }
+  }
+}
+
+//nav
+nav {
+  width: (750rem/@beaseFont);
+
+  a {
+    float: left;
+    width: (150rem/@beaseFont);
+    height: (140rem/@beaseFont);
+    text-align: center;
+    img{
+      display: block;
+      width: (82rem/@beaseFont);
+      height: (82rem/@beaseFont);
+      margin: (10rem/@beaseFont) auto 0;
+    }
+    span{
+      font-size: (25rem/@beaseFont);
+      color: #333;
+    }
+  }
+}
